@@ -80,9 +80,6 @@ async def classify_text(request: ClassificationRequest):
         
         # Get the highest scoring label and its score
         top_prediction_idx = result['scores'].index(max(result['scores']))
-        print("XXX"*10)
-        print(top_prediction_idx)
-        print("XXX"*10)
         # Format response
         response = ClassificationResponse(
             text=result["sequence"],
